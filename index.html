@@ -13,22 +13,17 @@
   <meta name="theme-color" content="#1d4ed8" />
   <style>
     :root{
-      --bg:#ffffff;       /* white */
-      --card:#ffffff;     /* white cards */
-      --muted:#475569;    /* slate-600 */
-      --text:#0f172a;     /* slate-900 */
-      --brand:#1d4ed8;    /* blue-700 */
-      --brand-2:#3b82f6;  /* blue-500 */
-      --accent:#ef4444;   /* red-500 */
-      --border:#e5e7eb;   /* gray-200 */
-      --shadow:0 10px 30px rgba(2,6,23,.08);
-      --radius:18px;
+      --bg:#ffffff; --card:#ffffff; --muted:#475569; --text:#0f172a;
+      --brand:#1d4ed8; --brand-2:#3b82f6; --accent:#ef4444; --border:#e5e7eb;
+      --shadow:0 10px 30px rgba(2,6,23,.08); --radius:18px;
     }
     *{box-sizing:border-box}
     body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";background:radial-gradient(1200px 600px at 80% -10%, rgba(29,78,216,.06), transparent),radial-gradient(1000px 500px at -10% 10%, rgba(239,68,68,.05), transparent),var(--bg);color:var(--text);line-height:1.6}
     a{color:inherit}
     .container{max-width:1120px;margin:0 auto;padding:24px}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;flex-wrap:wrap;gap:10px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.3px}
+    .logo-img{height:44px;width:auto;display:block}
     .badge{font-size:12px;background:#dbeafe; color:#1e3a8a; padding:6px 10px;border-radius:999px;display:inline-flex;gap:8px;align-items:center}
     .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#ffffff;font-weight:700;text-decoration:none;box-shadow:var(--shadow);border:0}
     .btn.secondary{background:#ffffff;color:var(--brand);border:1px solid #bfdbfe}
@@ -47,29 +42,39 @@
     ul.clean{margin:0;padding:0;list-style:none;display:grid;gap:10px}
     li.item{display:flex;gap:10px}
     .check{width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:inline-flex;align-items:center;justify-content:center;color:#ffffff;font-weight:900}
-    .price{display:flex;align-items:baseline;gap:8px}
-    .price b{font-size:34px}
     .table{width:100%;border-collapse:separate;border-spacing:0}
+    .table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--border);border-radius:14px}
     .table th,.table td{padding:12px 14px;border-bottom:1px solid var(--border)}
     .cta{display:flex;gap:12px;flex-wrap:wrap}
     .footer{padding:30px 0;border-top:1px solid var(--border);color:#64748b;font-size:14px}
     .hero-img{aspect-ratio:4/3;border-radius:var(--radius);background:linear-gradient(135deg, rgba(59,130,246,.25), rgba(239,68,68,.15)), url('https://images.unsplash.com/photo-1581579188871-45ea61f2a0c8?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;border:1px solid var(--border);min-height:260px}
-    .logo{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.3px}
-    .logo-img{height:44px; width:auto; display:block}
-    @media (max-width: 900px){
-      .hero{grid-template-columns:1fr;}
-      .grid-3{grid-template-columns:1fr;}
-      .grid-2{grid-template-columns:1fr;}
+    @media (max-width: 900px){.hero{grid-template-columns:1fr;}.grid-3{grid-template-columns:1fr;}.grid-2{grid-template-columns:1fr;}}
+    @media (max-width: 640px){
+      .container{padding:16px}
+      .logo-img{height:36px}
+      .nav{gap:10px;flex-wrap:wrap}
+      .hero h1{font-size:30px}
+      .hero p{font-size:16px}
+      .hero{padding:24px 0}
+      .hero-img{min-height:200px}
+      .cta .btn{width:100%;justify-content:center}
+      .table th,.table td{padding:10px 12px}
     }
     .hover-up{transition:transform .2s ease, box-shadow .2s ease}
     .hover-up:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(2,6,23,.12)}
+    .form-grid{grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:640px){.form-grid{grid-template-columns:1fr}}
+    .success{display:none;margin-top:10px;color:#166534;background:#dcfce7;border:1px solid #bbf7d0;border-radius:12px;padding:10px 12px}
   </style>
 </head>
 <body>
   <div class="container">
     <!-- NAV -->
     <nav class="nav">
-      <div class="logo"><img class="logo-img" src="logo.png" alt="Mon Ami – praonica rublja" /> <span>Mon Ami • Praonica rublja</span></div>
+      <div class="logo">
+        <img class="logo-img" src="logo.png" alt="Mon Ami – praonica rublja" />
+        <span>Mon Ami • Praonica rublja</span>
+      </div>
       <div class="cta">
         <a class="btn secondary" href="#cjenik">Cjenik</a>
         <a class="btn" href="#kontakt">Zatraži ponudu</a>
@@ -134,18 +139,20 @@
     <section id="cjenik" class="section">
       <h2>Cjenik (primjer – prilagodit ćemo za tebe)</h2>
       <div class="card pad">
-        <table class="table">
-          <thead>
-            <tr><th>Artikl</th><th>Usluga</th><th>Cijena (EUR)</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Plahte / Navlake</td><td>Pranje + glačanje</td><td>od 1,20</td></tr>
-            <tr><td>Jastučnice</td><td>Pranje + glačanje</td><td>od 0,50</td></tr>
-            <tr><td>Ručnici</td><td>Pranje + sušenje</td><td>od 0,80</td></tr>
-            <tr><td>Stolnjak (veliki)</td><td>Pranje + glačanje</td><td>od 2,50</td></tr>
-            <tr><td>Salveta</td><td>Pranje + glačanje</td><td>od 0,35</td></tr>
-          </tbody>
-        </table>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr><th>Artikl</th><th>Usluga</th><th>Cijena (EUR)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Plahte / Navlake</td><td>Pranje + glačanje</td><td>od 1,20</td></tr>
+              <tr><td>Jastučnice</td><td>Pranje + glačanje</td><td>od 0,50</td></tr>
+              <tr><td>Ručnici</td><td>Pranje + sušenje</td><td>od 0,80</td></tr>
+              <tr><td>Stolnjak (veliki)</td><td>Pranje + glačanje</td><td>od 2,50</td></tr>
+              <tr><td>Salveta</td><td>Pranje + glačanje</td><td>od 0,35</td></tr>
+            </tbody>
+          </table>
+        </div>
         <p class="muted" style="margin-top:10px">*Cijene su informativne. U <strong>cijenu je uključena dostava</strong>. Izradit ćemo personaliziranu ponudu prema volumenu i učestalosti.</p>
       </div>
     </section>
@@ -156,34 +163,38 @@
         <div class="card pad">
           <h2>Zatraži ponudu</h2>
           <p class="muted">Pošalji nam popis artikala i okvirne količine. Odgovaramo u roku 24 h.</p>
-          <form action="https://formspree.io/f/movkpnbo" method="POST" class="grid-2" style="grid-template-columns:1fr 1fr;gap:12px">
-            <input type="hidden" name="form-name" value="kontakt" />
+          <form action="https://formspree.io/f/movkpnbo" method="POST" class="grid-2 form-grid">
+            <!-- Optional anti-spam honeypot -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
             <input class="card pad" style="border:1px solid var(--border)" required name="ime" placeholder="Ime i prezime" />
             <input class="card pad" style="border:1px solid var(--border)" required type="email" name="email" placeholder="Email" />
             <input class="card pad" style="border:1px solid var(--border)" name="telefon" placeholder="Telefon" />
             <input class="card pad" style="border:1px solid var(--border)" name="lokacija" placeholder="Lokacija (npr. Zagreb)" />
             <textarea class="card pad" style="border:1px solid var(--border); grid-column:1/-1" rows="5" name="poruka" placeholder="Recite nam potrebe: vrste artikala, procijenjeni tjedni volumen, učestalost..."></textarea>
+            <!-- Optional subject helps you sort emails -->
+            <input type="hidden" name="_subject" value="Upit s weba – Mon Ami" />
             <button class="btn" style="grid-column:1/-1" type="submit">Pošalji upit</button>
+            <p class="success" id="success-msg">Hvala! Vaša poruka je poslana.</p>
           </form>
         </div>
-        <div class="card pad">
+        <div class="card pad" id="kontakt">
           <h2>Kontakt</h2>
           <ul class="clean">
             <li class="item"><span class="check">✓</span> Email: <a href="mailto:info@mon-ami.hr">info@mon-ami.hr</a></li>
-            <li class="item"><span class="check">✓</span> Telefon: +385 91 897 2364</li>
+            <li class="item"><span class="check">✓</span> Telefon: <a href="tel:+385918972364">+385 91 897 2364</a></li>
             <li class="item"><span class="check">✓</span> Preuzimanje i dostava: po dogovoru</li>
           </ul>
           <div class="card pad" style="margin-top:12px">
             <div class="muted">Radno vrijeme</div>
-            <div>Pon–Pet: 08:00–18:00</div>
-            <div>Sub: 09:00–13:00</div>
+            <div>Pon–Sub: 08:00–16:00</div>
+            <div>Ned: Zatvoreno</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- FOOTER -->
-    <footer id="kontakt" class="footer">
+    <footer class="footer">
       <div class="grid-2">
         <div>
           © <span id="y"></span> Mon Ami. Sva prava pridržana.
@@ -194,6 +205,9 @@
       </div>
     </footer>
   </div>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+
+  <script>
+    document.getElementById('y').textContent=new Date().getFullYear();
+  </script>
 </body>
 </html>
