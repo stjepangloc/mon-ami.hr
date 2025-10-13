@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mon Ami – Praonica rublja za hotele, restorane i apartmane</title>
+  <meta name="description" content="Profesionalna praonica rublja za HoReCa: dostava uključena u cijenu, brzi rokovi i stalna kvaliteta." />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta property="og:title" content="Mon Ami – Praonica rublja" />
+  <meta property="og:description" content="Profesionalna praonica rublja za hotele, restorane i apartmane. Dostava uključena u cijenu." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#1d4ed8" />
+  <style>
+    :root{
+      --bg:#ffffff;       /* white */
+      --card:#ffffff;     /* white cards */
+      --muted:#475569;    /* slate-600 */
+      --text:#0f172a;     /* slate-900 */
+      --brand:#1d4ed8;    /* blue-700 */
+      --brand-2:#3b82f6;  /* blue-500 */
+      --accent:#ef4444;   /* red-500 */
+      --border:#e5e7eb;   /* gray-200 */
+      --shadow:0 10px 30px rgba(2,6,23,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";background:radial-gradient(1200px 600px at 80% -10%, rgba(29,78,216,.06), transparent),radial-gradient(1000px 500px at -10% 10%, rgba(239,68,68,.05), transparent),var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit}
+    .container{max-width:1120px;margin:0 auto;padding:24px}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .badge{font-size:12px;background:#dbeafe; color:#1e3a8a; padding:6px 10px;border-radius:999px;display:inline-flex;gap:8px;align-items:center}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#ffffff;font-weight:700;text-decoration:none;box-shadow:var(--shadow);border:0}
+    .btn.secondary{background:#ffffff;color:var(--brand);border:1px solid #bfdbfe}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding:40px 0}
+    .hero h1{font-size:42px;line-height:1.1;margin:12px 0 8px}
+    .hero p{color:var(--muted);font-size:18px;margin:0 0 22px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .card.pad{padding:22px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .kpi{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start}
+    .kpi strong{font-size:28px}
+    .section{padding:28px 0}
+    .section h2{font-size:28px;margin:0 0 12px}
+    .muted{color:var(--muted)}
+    ul.clean{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+    li.item{display:flex;gap:10px}
+    .check{width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:inline-flex;align-items:center;justify-content:center;color:#ffffff;font-weight:900}
+    .price{display:flex;align-items:baseline;gap:8px}
+    .price b{font-size:34px}
+    .table{width:100%;border-collapse:separate;border-spacing:0}
+    .table th,.table td{padding:12px 14px;border-bottom:1px solid var(--border)}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .footer{padding:30px 0;border-top:1px solid var(--border);color:#64748b;font-size:14px}
+    .hero-img{aspect-ratio:4/3;border-radius:var(--radius);background:linear-gradient(135deg, rgba(59,130,246,.25), rgba(239,68,68,.15)), url('https://images.unsplash.com/photo-1581579188871-45ea61f2a0c8?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;border:1px solid var(--border);min-height:260px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.3px}
+    .logo-img{height:44px; width:auto; display:block}
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr;}
+      .grid-3{grid-template-columns:1fr;}
+      .grid-2{grid-template-columns:1fr;}
+    }
+    .hover-up{transition:transform .2s ease, box-shadow .2s ease}
+    .hover-up:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(2,6,23,.12)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- NAV -->
+    <nav class="nav">
+      <div class="logo"><img class="logo-img" src="logo.png" alt="Mon Ami – praonica rublja" /> <span>Mon Ami • Praonica rublja</span></div>
+      <div class="cta">
+        <a class="btn secondary" href="#cjenik">Cjenik</a>
+        <a class="btn" href="#kontakt">Zatraži ponudu</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <span class="badge">HoReCa specijalisti • Preuzimanje i dostava</span>
+        <h1>Čistoća bez kompromisa za hotele, restorane i apartmane</h1>
+        <p class="muted" style="margin:-6px 0 16px;font-size:14px">U cijenu svih usluga je <strong>uključena dostava</strong>.</p>
+        <p>Profesionalno pranje, sušenje i glačanje uz stroge higijenske standarde. Fleksibilni rokovi, pouzdana logistika i stalna kvaliteta.</p>
+        <div class="cta">
+          <a class="btn" href="#ponuda">Zatraži ponudu</a>
+          <a class="btn secondary" href="#usluge">Pogledaj usluge</a>
+        </div>
+        <div class="grid-3 section">
+          <div class="card pad kpi"><strong>24–48h</strong><span class="muted">Standardni rok isporuke</span></div>
+          <div class="card pad kpi"><strong>95%+</strong><span class="muted">Zadovoljstvo klijenata</span></div>
+          <div class="card pad kpi"><strong>Dostava</strong><span class="muted">Uključena u cijenu</span></div>
+        </div>
+      </div>
+      <div class="hero-img card hover-up" aria-label="Fotografija praonice rublja"></div>
+    </section>
+
+    <!-- USLUGE -->
+    <section id="usluge" class="section">
+      <h2>Usluge</h2>
+      <div class="grid-3">
+        <div class="card pad hover-up">
+          <h3>Pranje i glačanje posteljine</h3>
+          <p class="muted">Za hotele, apartmane i kuće za odmor. Odvoz i dovoz po dogovoru.</p>
+          <ul class="clean">
+            <li class="item"><span class="check">✓</span> Bijeli program (90°C) i program za osjetljive tkanine</li>
+            <li class="item"><span class="check">✓</span> Sredstva s certifikatom za profesionalnu uporabu</li>
+            <li class="item"><span class="check">✓</span> Kontrola mrlja i završna inspekcija</li>
+          </ul>
+        </div>
+        <div class="card pad hover-up">
+          <h3>Usluga za ugostiteljstvo</h3>
+          <p class="muted">Stolnjaci, nadstolnjaci, salvete i kuhinjski program.</p>
+          <ul class="clean">
+            <li class="item"><span class="check">✓</span> Skidanje teških mrlja (vino, ulje)</li>
+            <li class="item"><span class="check">✓</span> Industrijske sušare i mangle</li>
+            <li class="item"><span class="check">✓</span> Fleksibilne dostave prema smjeni</li>
+          </ul>
+        </div>
+        <div class="card pad hover-up">
+          <h3>Higijenski program</h3>
+          <p class="muted">Programi i dezinfekcija sukladno preporukama proizvođača i normama.</p>
+          <ul class="clean">
+            <li class="item"><span class="check">✓</span> Evidencija serija i deterdženata</li>
+            <li class="item"><span class="check">✓</span> Odvojeni tokovi prljavo/čisto</li>
+            <li class="item"><span class="check">✓</span> Zaštita tkanine i dugotrajnost</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CJENIK / PRIMJER -->
+    <section id="cjenik" class="section">
+      <h2>Cjenik (primjer – prilagodit ćemo za tebe)</h2>
+      <div class="card pad">
+        <table class="table">
+          <thead>
+            <tr><th>Artikl</th><th>Usluga</th><th>Cijena (EUR)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Plahte / Navlake</td><td>Pranje + glačanje</td><td>od 1,20</td></tr>
+            <tr><td>Jastučnice</td><td>Pranje + glačanje</td><td>od 0,50</td></tr>
+            <tr><td>Ručnici</td><td>Pranje + sušenje</td><td>od 0,80</td></tr>
+            <tr><td>Stolnjak (veliki)</td><td>Pranje + glačanje</td><td>od 2,50</td></tr>
+            <tr><td>Salveta</td><td>Pranje + glačanje</td><td>od 0,35</td></tr>
+          </tbody>
+        </table>
+        <p class="muted" style="margin-top:10px">*Cijene su informativne. U <strong>cijenu je uključena dostava</strong>. Izradit ćemo personaliziranu ponudu prema volumenu i učestalosti.</p>
+      </div>
+    </section>
+
+    <!-- CTA PONUDA -->
+    <section id="ponuda" class="section">
+      <div class="grid-2">
+        <div class="card pad">
+          <h2>Zatraži ponudu</h2>
+          <p class="muted">Pošalji nam popis artikala i okvirne količine. Odgovaramo u roku 24 h.</p>
+          <form name="kontakt" method="POST" data-netlify="true" class="grid-2" style="grid-template-columns:1fr 1fr;gap:12px">
+            <input type="hidden" name="form-name" value="kontakt" />
+            <input class="card pad" style="border:1px solid var(--border)" required name="ime" placeholder="Ime i prezime" />
+            <input class="card pad" style="border:1px solid var(--border)" required type="email" name="email" placeholder="Email" />
+            <input class="card pad" style="border:1px solid var(--border)" name="telefon" placeholder="Telefon" />
+            <input class="card pad" style="border:1px solid var(--border)" name="lokacija" placeholder="Lokacija (npr. Zagreb)" />
+            <textarea class="card pad" style="border:1px solid var(--border); grid-column:1/-1" rows="5" name="poruka" placeholder="Recite nam potrebe: vrste artikala, procijenjeni tjedni volumen, učestalost..."></textarea>
+            <button class="btn" style="grid-column:1/-1" type="submit">Pošalji upit</button>
+          </form>
+        </div>
+        <div class="card pad">
+          <h2>Kontakt</h2>
+          <ul class="clean">
+            <li class="item"><span class="check">✓</span> Email: <a href="mailto:info@mon-ami.hr">info@mon-ami.hr</a></li>
+            <li class="item"><span class="check">✓</span> Telefon: +385 91 897 2364</li>
+            <li class="item"><span class="check">✓</span> Preuzimanje i dostava: po dogovoru</li>
+          </ul>
+          <div class="card pad" style="margin-top:12px">
+            <div class="muted">Radno vrijeme</div>
+            <div>Pon–Pet: 08:00–18:00</div>
+            <div>Sub: 09:00–13:00</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="kontakt" class="footer">
+      <div class="grid-2">
+        <div>
+          © <span id="y"></span> Mon Ami. Sva prava pridržana.
+        </div>
+        <div style="text-align:right">
+          <a href="#">Politika privatnosti</a> · <a href="#">Uvjeti korištenja</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
