@@ -3,211 +3,572 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mon Ami – Praonica rublja za hotele, restorane i apartmane</title>
-  <meta name="description" content="Profesionalna praonica rublja za HoReCa: dostava uključena u cijenu, brzi rokovi i stalna kvaliteta." />
+  <title>Mon Ami – Praonica rublja | Dostava za hotele i restorane Zagreb</title>
+  <meta name="description" content="Profesionalna praonica rublja Mon Ami u Zagrebu. Specijalizirani za HoReCa sektor: besplatna dostava, pranje posteljine i stolnjaka u roku 24-48h." />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <meta property="og:title" content="Mon Ami – Praonica rublja" />
-  <meta property="og:description" content="Profesionalna praonica rublja za hotele, restorane i apartmane. Dostava uključena u cijenu." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#1d4ed8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --bg:#ffffff; --card:#ffffff; --muted:#475569; --text:#0f172a;
-      --brand:#1d4ed8; --brand-2:#3b82f6; --accent:#ef4444; --border:#e5e7eb;
-      --shadow:0 10px 30px rgba(2,6,23,.08); --radius:18px;
+    :root {
+      --bg: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --brand: #e11d48;
+      --brand-dark: #be123c;
+      --brand-2: #1d4ed8;
+      --brand-2-dark: #1e40af;
+      --border: #e2e8f0;
+      --surface: #f8fafc;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow: 0 4px 24px rgba(0,0,0,0.08);
+      --shadow-lg: 0 16px 48px rgba(0,0,0,0.12);
+      --radius: 16px;
+      --radius-sm: 10px;
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";background:radial-gradient(1200px 600px at 80% -10%, rgba(29,78,216,.06), transparent),radial-gradient(1000px 500px at -10% 10%, rgba(239,68,68,.05), transparent),var(--bg);color:var(--text);line-height:1.6}
-    a{color:inherit}
-    .container{max-width:1120px;margin:0 auto;padding:24px}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;flex-wrap:wrap;gap:10px}
-    .logo{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.3px}
-    .logo-img{height:44px;width:auto;display:block}
-    .badge{font-size:12px;background:#dbeafe; color:#1e3a8a; padding:6px 10px;border-radius:999px;display:inline-flex;gap:8px;align-items:center}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#ffffff;font-weight:700;text-decoration:none;box-shadow:var(--shadow);border:0}
-    .btn.secondary{background:#ffffff;color:var(--brand);border:1px solid #bfdbfe}
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding:40px 0}
-    .hero h1{font-size:42px;line-height:1.1;margin:12px 0 8px}
-    .hero p{color:var(--muted);font-size:18px;margin:0 0 22px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .card.pad{padding:22px}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-    .kpi{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start}
-    .kpi strong{font-size:28px}
-    .section{padding:28px 0}
-    .section h2{font-size:28px;margin:0 0 12px}
-    .muted{color:var(--muted)}
-    ul.clean{margin:0;padding:0;list-style:none;display:grid;gap:10px}
-    li.item{display:flex;gap:10px}
-    .check{width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:inline-flex;align-items:center;justify-content:center;color:#ffffff;font-weight:900}
-    .table{width:100%;border-collapse:separate;border-spacing:0}
-    .table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--border);border-radius:14px}
-    .table th,.table td{padding:12px 14px;border-bottom:1px solid var(--border)}
-    .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .footer{padding:30px 0;border-top:1px solid var(--border);color:#64748b;font-size:14px}
-    .hero-img{aspect-ratio:4/3;border-radius:var(--radius);background:linear-gradient(135deg, rgba(59,130,246,.25), rgba(239,68,68,.15)), url('https://images.unsplash.com/photo-1581579188871-45ea61f2a0c8?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;border:1px solid var(--border);min-height:260px}
-    @media (max-width: 900px){.hero{grid-template-columns:1fr;}.grid-3{grid-template-columns:1fr;}.grid-2{grid-template-columns:1fr;}}
-    @media (max-width: 640px){
-      .container{padding:16px}
-      .logo-img{height:36px}
-      .nav{gap:10px;flex-wrap:wrap}
-      .hero h1{font-size:30px}
-      .hero p{font-size:16px}
-      .hero{padding:24px 0}
-      .hero-img{min-height:200px}
-      .cta .btn{width:100%;justify-content:center}
-      .table th,.table td{padding:10px 12px}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
     }
-    .hover-up{transition:transform .2s ease, box-shadow .2s ease}
-    .hover-up:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(2,6,23,.12)}
-    .form-grid{grid-template-columns:1fr 1fr;gap:12px}
-    @media (max-width:640px){.form-grid{grid-template-columns:1fr}}
-    .success{display:none;margin-top:10px;color:#166534;background:#dcfce7;border:1px solid #bbf7d0;border-radius:12px;padding:10px 12px}
+
+    /* ── TYPOGRAPHY ─────────────────────────────── */
+    h1 { font-size: clamp(34px, 5vw, 52px); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; }
+    h2 { font-size: clamp(24px, 3vw, 34px); font-weight: 800; letter-spacing: -0.5px; }
+    h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    p  { color: var(--muted); }
+    a  { color: inherit; }
+
+    /* ── LAYOUT ─────────────────────────────────── */
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 80px 0; }
+
+    /* ── NAVIGATION ─────────────────────────────── */
+    .nav-wrapper {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 0;
+    }
+    .nav-links { display: flex; align-items: center; gap: 8px; }
+    .nav-link {
+      font-size: 14px; font-weight: 600; color: var(--muted);
+      text-decoration: none; padding: 8px 16px; border-radius: 999px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-link:hover { color: var(--text); background: var(--surface); }
+    .logo-img { height: 48px; width: auto; display: block; }
+
+    /* ── BUTTONS ─────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 26px; border-radius: 999px; font-size: 15px;
+      font-weight: 700; text-decoration: none; border: none; cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+      white-space: nowrap;
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-lg); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+      color: #fff; box-shadow: 0 4px 16px rgba(225,29,72,0.35);
+    }
+    .btn-outline {
+      background: #fff; color: var(--brand-2);
+      border: 2px solid var(--brand-2);
+    }
+    .btn-outline:hover { background: var(--brand-2); color: #fff; }
+
+    /* ── BADGE ───────────────────────────────────── */
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #fff1f2; color: #9f1239;
+      font-size: 13px; font-weight: 600;
+      padding: 7px 16px; border-radius: 999px;
+      margin-bottom: 20px; border: 1px solid #fecdd3;
+    }
+    .badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--brand); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.6; transform:scale(1.3); } }
+
+    /* ── HERO ────────────────────────────────────── */
+    .hero {
+      display: grid; grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px; align-items: center; padding: 70px 0 80px;
+    }
+    .hero-cta { display: flex; align-items: center; gap: 14px; margin-top: 32px; flex-wrap: wrap; }
+    .hero h1 { margin-bottom: 16px; }
+    .hero p   { font-size: 17px; max-width: 480px; }
+    .hero-img {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, rgba(29,78,216,0.15) 0%, rgba(225,29,72,0.08) 100%),
+        url('https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=900&q=85') center/cover no-repeat;
+    }
+
+    /* ── TRUST BAR ───────────────────────────────── */
+    .trust-bar {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 22px 0;
+    }
+    .trust-items { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--text); }
+    .trust-icon { font-size: 22px; }
+
+    /* ── CARDS ───────────────────────────────────── */
+    .card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: var(--radius); box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+    .card.pad { padding: 28px; }
+    .card-icon {
+      width: 52px; height: 52px; border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px; margin-bottom: 16px;
+    }
+
+    /* ── GRID ────────────────────────────────────── */
+    .grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+
+    /* ── SECTION HEADER ──────────────────────────── */
+    .section-header { text-align: center; max-width: 580px; margin: 0 auto 48px; }
+    .section-header p { font-size: 17px; margin-top: 12px; }
+    .section-label {
+      font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--brand); margin-bottom: 12px;
+      display: block;
+    }
+
+    /* ── HOW IT WORKS ────────────────────────────── */
+    .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; position: relative; }
+    .steps::before {
+      content: ''; position: absolute; top: 36px; left: calc(16.66% + 28px);
+      right: calc(16.66% + 28px); height: 2px;
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+    }
+    .step { text-align: center; padding: 0 24px; }
+    .step-num {
+      width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 20px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px; font-weight: 800; color: #fff; position: relative; z-index: 1;
+    }
+    .step-num.s1 { background: linear-gradient(135deg, var(--brand), var(--brand-dark)); }
+    .step-num.s2 { background: linear-gradient(135deg, #7c3aed, #5b21b6); }
+    .step-num.s3 { background: linear-gradient(135deg, var(--brand-2), var(--brand-2-dark)); }
+    .step h3 { font-size: 17px; margin-bottom: 8px; }
+
+    /* ── PRICE TABLE ─────────────────────────────── */
+    .price-table { width: 100%; border-collapse: collapse; }
+    .price-table th {
+      text-align: left; padding: 14px 18px;
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--brand-2);
+      background: #f0f4ff; border-bottom: 2px solid var(--border);
+    }
+    .price-table th:first-child { border-radius: var(--radius-sm) 0 0 0; }
+    .price-table th:last-child  { border-radius: 0 var(--radius-sm) 0 0; }
+    .price-table td { padding: 16px 18px; border-bottom: 1px solid var(--border); font-size: 15px; }
+    .price-table tr:last-child td { border-bottom: none; }
+    .price-table tr:hover td { background: var(--surface); }
+    .price-tag { font-weight: 700; color: var(--brand); font-size: 16px; }
+
+    
+
+    /* ── CONTACT SECTION ─────────────────────────── */
+    .contact-section { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #fff; }
+    .contact-section h2 { color: #fff; }
+    .contact-section p  { color: #94a3b8; }
+    .contact-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 32px; }
+
+    /* ── FORM ────────────────────────────────────── */
+    .form-group { display: grid; gap: 12px; }
+    .form-input {
+      width: 100%; padding: 14px 18px;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-sm); font-size: 15px; color: #fff;
+      font-family: inherit; outline: none; transition: border-color 0.2s, background 0.2s;
+    }
+    .form-input::placeholder { color: #64748b; }
+    .form-input:focus { border-color: var(--brand); background: rgba(255,255,255,0.12); }
+    .form-input.light {
+      background: #fff; border: 1.5px solid var(--border); color: var(--text);
+    }
+    .form-input.light::placeholder { color: #94a3b8; }
+    .form-input.light:focus { border-color: var(--brand-2); box-shadow: 0 0 0 3px rgba(29,78,216,0.1); }
+    textarea.form-input { resize: vertical; min-height: 110px; }
+
+    /* ── INFO CARDS ──────────────────────────────── */
+    .info-item { display: flex; align-items: flex-start; gap: 14px; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .info-item:last-child { border-bottom: none; }
+    .info-icon { font-size: 22px; margin-top: 2px; flex-shrink: 0; }
+    .info-label { font-size: 12px; font-weight: 600; letter-spacing: 0.5px; color: #64748b; text-transform: uppercase; }
+    .info-value { font-size: 16px; font-weight: 600; color: #e2e8f0; margin-top: 2px; }
+    .info-value a { color: #93c5fd; text-decoration: none; }
+    .info-value a:hover { color: #fff; }
+
+    /* ── FOOTER ──────────────────────────────────── */
+    footer {
+      background: #020617; color: #475569;
+      text-align: center; padding: 28px 24px; font-size: 13px;
+    }
+    footer a { color: #64748b; text-decoration: none; }
+    footer a:hover { color: #fff; }
+
+    /* ── MOBILE CTA ──────────────────────────────── */
+    .mobile-cta {
+      display: none; position: fixed; bottom: 20px; left: 50%;
+      transform: translateX(-50%); z-index: 999;
+      background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+      color: #fff; font-weight: 700; font-size: 15px;
+      padding: 15px 32px; border-radius: 999px; text-decoration: none;
+      box-shadow: 0 8px 24px rgba(225,29,72,0.4);
+      white-space: nowrap;
+    }
+
+    /* ── RESPONSIVE ──────────────────────────────── */
+    @media (max-width: 768px) {
+      section { padding: 56px 0; }
+      .hero { grid-template-columns: 1fr; gap: 32px; padding: 48px 0 56px; text-align: center; }
+      .hero p { margin: 0 auto; }
+      .hero-cta { justify-content: center; }
+      .hero-img { display: none; }
+      .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; gap: 32px; }
+      .steps::before { display: none; }
+      .nav-links .nav-link { display: none; }
+      .mobile-cta { display: flex; }
+      .trust-items { gap: 20px; }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- NAV -->
-    <nav class="nav">
-      <div class="logo">
-        <img class="logo-img" src="logo.png" alt="Mon Ami – praonica rublja" />
-        <span>Mon Ami • Praonica rublja</span>
-      </div>
-      <div class="cta">
-        <a class="btn secondary" href="#cjenik">Cjenik</a>
-        <a class="btn" href="#kontakt">Zatraži ponudu</a>
-      </div>
-    </nav>
 
-    <!-- HERO -->
+  <!-- NAV -->
+  <div class="nav-wrapper">
+    <div class="container">
+      <nav class="nav">
+        <a href="#"><img class="logo-img" src="logo.png" alt="Mon Ami praonica rublja" /></a>
+        <div class="nav-links">
+          <a class="nav-link" href="#usluge">Usluge</a>
+          <a class="nav-link" href="#kako-radimo">Kako radimo</a>
+          <a class="nav-link" href="#cjenik">Cjenik</a>
+          <a class="nav-link" href="#kontakt">Kontakt</a>
+          <a class="btn btn-primary" href="#kontakt" style="margin-left:8px; padding:10px 22px; font-size:14px;">Zatraži ponudu</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="container">
     <section class="hero">
       <div>
-        <span class="badge">HoReCa specijalisti • Preuzimanje i dostava</span>
-        <h1>Čistoća bez kompromisa za hotele, restorane i apartmane</h1>
-        <p class="muted" style="margin:-6px 0 16px;font-size:14px">U cijenu svih usluga je <strong>uključena dostava</strong>.</p>
-        <p>Profesionalno pranje, sušenje i glačanje uz stroge higijenske standarde. Fleksibilni rokovi, pouzdana logistika i stalna kvaliteta.</p>
-        <div class="cta">
-          <a class="btn" href="#ponuda">Zatraži ponudu</a>
-          <a class="btn secondary" href="#usluge">Pogledaj usluge</a>
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Zagreb i okolica &nbsp;•&nbsp; Besplatna dostava &nbsp;•&nbsp; 24–48h rok
         </div>
-        <div class="grid-3 section">
-          <div class="card pad kpi"><strong>24–48h</strong><span class="muted">Standardni rok isporuke</span></div>
-          <div class="card pad kpi"><strong>95%+</strong><span class="muted">Zadovoljstvo klijenata</span></div>
-          <div class="card pad kpi"><strong>Dostava</strong><span class="muted">Uključena u cijenu</span></div>
+        <h1>Čisto rublje.<br>Svaki dan.<br>Na<span style="color:var(--brand)"> vrijeme.</span></h1>
+        <p>Profesionalna praonica rublja za hotele, restorane i apartmane. Preuzimamo, peremo, glačamo i dostavljamo — vi se fokusirate na goste.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#kontakt">📩 Pošaljite upit odmah</a>
+          <a class="btn btn-outline" href="#usluge">Naše usluge</a>
         </div>
       </div>
-      <div class="hero-img card hover-up" aria-label="Fotografija praonice rublja"></div>
+      <div class="hero-img" aria-label="Profesionalni strojevi za pranje rublja"></div>
     </section>
+  </div>
 
-    <!-- USLUGE -->
-    <section id="usluge" class="section">
-      <h2>Usluge</h2>
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-items">
+        <div class="trust-item"><span class="trust-icon">🚚</span> Dostava uvijek uključena</div>
+        <div class="trust-item"><span class="trust-icon">⏱️</span> Rok isporuke 24–48h</div>
+        <div class="trust-item"><span class="trust-icon">🧴</span> Visoki higijenske standarde</div>
+        <div class="trust-item"><span class="trust-icon">📦</span> Fleksibilne količine</div>
+        <div class="trust-item"><span class="trust-icon">🤝</span> Dugoročni partnerski ugovori</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="container">
+    <section id="usluge">
+      <div class="section-header">
+        <span class="section-label">Naše usluge</span>
+        <h2>Specijalizirani HoReCa programi</h2>
+        <p>Svaki program prilagođen je specifičnim potrebama vašeg objekta — od broja komada do učestalosti dostave.</p>
+      </div>
       <div class="grid-3">
-        <div class="card pad hover-up">
-          <h3>Pranje i glačanje posteljine</h3>
-          <p class="muted">Za hotele, apartmane i kuće za odmor. Odvoz i dovoz po dogovoru.</p>
-          <ul class="clean">
-            <li class="item"><span class="check">✓</span> Bijeli program (90°C) i program za osjetljive tkanine</li>
-            <li class="item"><span class="check">✓</span> Sredstva s certifikatom za profesionalnu uporabu</li>
-            <li class="item"><span class="check">✓</span> Kontrola mrlja i završna inspekcija</li>
-          </ul>
+        <div class="card pad">
+          <div class="card-icon" style="background:#fff1f2;">🛏️</div>
+          <h3>Posteljni program</h3>
+          <p>Pranje i strojno glačanje (manganje) plahti, navlaka i jastučnica uz visoke higijenske standarde i besprijekornu bjelinu.</p>
         </div>
-        <div class="card pad hover-up">
-          <h3>Usluga za ugostiteljstvo</h3>
-          <p class="muted">Stolnjaci, nadstolnjaci, salvete i kuhinjski program.</p>
-          <ul class="clean">
-            <li class="item"><span class="check">✓</span> Skidanje teških mrlja (vino, ulje)</li>
-            <li class="item"><span class="check">✓</span> Industrijske sušare i mangle</li>
-            <li class="item"><span class="check">✓</span> Fleksibilne dostave prema smjeni</li>
-          </ul>
+        <div class="card pad">
+          <div class="card-icon" style="background:#f0fdf4;">🍽️</div>
+          <h3>Restoranski program</h3>
+          <p>Specijalizirano uklanjanje mrlja sa stolnjaka i salveta. Pakiranje i dostava prilagođeni rasporedu vašeg restorana.</p>
         </div>
-        <div class="card pad hover-up">
-          <h3>Higijenski program</h3>
-          <p class="muted">Programi i dezinfekcija sukladno preporukama proizvođača i normama.</p>
-          <ul class="clean">
-            <li class="item"><span class="check">✓</span> Evidencija serija i deterdženata</li>
-            <li class="item"><span class="check">✓</span> Odvojeni tokovi prljavo/čisto</li>
-            <li class="item"><span class="check">✓</span> Zaštita tkanine i dugotrajnost</li>
-          </ul>
+        <div class="card pad">
+          <div class="card-icon" style="background:#eff6ff;">🛁</div>
+          <h3>Frotirni program</h3>
+          <p>Pranje i sušenje ručnika i kupaonskih ogrtača koji zadržavaju mekoću, volumen i dugotrajnu bjelinu.</p>
         </div>
       </div>
     </section>
+  </div>
 
-    <!-- CJENIK / PRIMJER -->
-    <section id="cjenik" class="section">
-      <h2>Cjenik (primjer – prilagodit ćemo za tebe)</h2>
-      <div class="card pad">
-        <div class="table-wrap">
-          <table class="table">
+  <!-- HOW IT WORKS -->
+  <div style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <section id="kako-radimo">
+        <div class="section-header">
+          <span class="section-label">Kako radimo</span>
+          <h2>Jednostavan proces u 3 koraka</h2>
+          <p>Dogovorimo raspored koji odgovara vama — mi se brinemo o svemu ostalom.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num s1">1</div>
+            <h3>Kontaktirajte nas</h3>
+            <p>Pošaljite upit s okvirnim količinama i učestalošću. Dogovorimo termine preuzimanja koji vama odgovaraju.</p>
+          </div>
+          <div class="step">
+            <div class="step-num s2">2</div>
+            <h3>Preuzimamo i obrađujemo</h3>
+            <p>Dolazimo na vaš objekt, preuzimamo rublje i obrađujemo ga u našem pogonu uz stroge higijenske standarde.</p>
+          </div>
+          <div class="step">
+            <div class="step-num s3">3</div>
+            <h3>Dostavljamo natrag</h3>
+            <p>Čisto, ispeglano i uredno složeno rublje dostavljamo nazad u dogovorenom roku — uvijek na vrijeme.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- PRICING -->
+  <div class="container">
+    <section id="cjenik">
+      <div class="section-header">
+        <span class="section-label">Cjenik</span>
+        <h2>Transparentne cijene</h2>
+        <p>Konačna cijena formira se prema vašem mjesečnom volumenu — veće količine, povoljnija cijena.</p>
+      </div>
+
+      <div class="grid-2" style="align-items:start; margin-bottom:20px;">
+
+        <!-- HOTELSKI PROGRAM -->
+        <div class="card" style="overflow:hidden;">
+          <div style="padding:20px 22px 14px; border-bottom:1px solid var(--border); background:var(--surface);">
+            <h3 style="font-size:16px; display:flex; align-items:center; gap:8px; margin:0;">🛏️ Hotelski program</h3>
+            <p style="font-size:13px; margin:4px 0 0; color:var(--muted);">Posteljina i kupaonski tekstil</p>
+          </div>
+          <table class="price-table">
             <thead>
-              <tr><th>Artikl</th><th>Usluga</th><th>Cijena (EUR)</th></tr>
+              <tr>
+                <th>Artikl</th>
+                <th>Usluga</th>
+                <th>Cijena (od)</th>
+              </tr>
             </thead>
             <tbody>
-              <tr><td>Plahte / Navlake</td><td>Pranje + glačanje</td><td>od 1,60</td></tr>
-              <tr><td>Jastučnice</td><td>Pranje + glačanje</td><td>od 0,60</td></tr>
-              <tr><td>Ručnici</td><td>Pranje + sušenje</td><td>od 0,80</td></tr>
-              <tr><td>Stolnjak</td><td>Pranje + glačanje</td><td>od 1,20</td></tr>
-              <tr><td>Salveta</td><td>Pranje + glačanje</td><td>od 0,30</td></tr>
+              <tr>
+                <td>Plahte</td>
+                <td>Pranje + glačanje</td>
+                <td><span class="price-tag">1,88 €</span></td>
+              </tr>
+              <tr>
+                <td>Navlake</td>
+                <td>Pranje + glačanje</td>
+                <td><span class="price-tag">2,50 €</span></td>
+              </tr>
+              <tr>
+                <td>Jastučnice</td>
+                <td>Pranje + glačanje</td>
+                <td><span class="price-tag">0,70 €</span></td>
+              </tr>
+              <tr>
+                <td>Ručnik mali</td>
+                <td>Pranje + sušenje</td>
+                <td><span class="price-tag">0,50 €</span></td>
+              </tr>
+              <tr>
+                <td>Ručnik srednji / stopa</td>
+                <td>Pranje + sušenje</td>
+                <td><span class="price-tag">0,80 €</span></td>
+              </tr>
+              <tr>
+                <td>Ručnik veliki</td>
+                <td>Pranje + sušenje</td>
+                <td><span class="price-tag">1,00 €</span></td>
+              </tr>
             </tbody>
           </table>
         </div>
-        <p class="muted" style="margin-top:10px">*Cijene su informativne. U <strong>cijenu je uključena dostava</strong>. Izradit ćemo personaliziranu ponudu prema volumenu i učestalosti.</p>
-      </div>
-    </section>
 
-    <!-- CTA PONUDA -->
-    <section id="ponuda" class="section">
-      <div class="grid-2">
-        <div class="card pad">
-          <h2>Zatraži ponudu</h2>
-          <p class="muted">Pošalji nam popis artikala i okvirne količine. Odgovaramo u roku 24 h.</p>
-          <form action="https://formspree.io/f/movkpnbo" method="POST" class="grid-2 form-grid">
-            <!-- Optional anti-spam honeypot -->
-            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-            <input class="card pad" style="border:1px solid var(--border)" required name="ime" placeholder="Ime i prezime" />
-            <input class="card pad" style="border:1px solid var(--border)" required type="email" name="email" placeholder="Email" />
-            <input class="card pad" style="border:1px solid var(--border)" name="telefon" placeholder="Telefon" />
-            <input class="card pad" style="border:1px solid var(--border)" name="lokacija" placeholder="Lokacija (npr. Zagreb)" />
-            <textarea class="card pad" style="border:1px solid var(--border); grid-column:1/-1" rows="5" name="poruka" placeholder="Recite nam potrebe: vrste artikala, procijenjeni tjedni volumen, učestalost..."></textarea>
-            <!-- Optional subject helps you sort emails -->
-            <input type="hidden" name="_subject" value="Upit s weba – Mon Ami" />
-            <button class="btn" style="grid-column:1/-1" type="submit">Pošalji upit</button>
-            <p class="success" id="success-msg">Hvala! Vaša poruka je poslana.</p>
-          </form>
-        </div>
-        <div class="card pad" id="kontakt">
-          <h2>Kontakt</h2>
-          <ul class="clean">
-            <li class="item"><span class="check">✓</span> Email: <a href="mailto:info@mon-ami.hr">info@mon-ami.hr</a></li>
-            <li class="item"><span class="check">✓</span> Telefon: <a href="tel:+385918972364">+385 91 897 2364</a></li>
-            <li class="item"><span class="check">✓</span> Preuzimanje i dostava: po dogovoru</li>
-          </ul>
-          <div class="card pad" style="margin-top:12px">
-            <div class="muted">Radno vrijeme</div>
-            <div>Pon–Sub: 08:00–16:00</div>
-            <div>Ned: Zatvoreno</div>
+        <!-- RESTORANSKI PROGRAM -->
+        <div class="card" style="overflow:hidden;">
+          <div style="padding:20px 22px 14px; border-bottom:1px solid var(--border); background:var(--surface);">
+            <h3 style="font-size:16px; display:flex; align-items:center; gap:8px; margin:0;">🍽️ Restoranski program</h3>
+            <p style="font-size:13px; margin:4px 0 0; color:var(--muted);">Stolni i kuhinjski tekstil</p>
           </div>
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th>Artikl</th>
+                <th>Usluga</th>
+                <th>Cijena (od)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Salveta</td>
+                <td>Pranje + glačanje</td>
+                <td><span class="price-tag">0,30 €</span></td>
+              </tr>
+              <tr>
+                <td>Nadstolnjak</td>
+                <td>Pranje + glačanje</td>
+                <td><span class="price-tag">0,70 €</span></td>
+              </tr>
+              <tr>
+                <td>Stolnjak</td>
+                <td>Pranje + glačanje</td>
+                <td><span class="price-tag">1,32 €</span></td>
+              </tr>
+              <tr>
+                <td>Kuhinjska krpa</td>
+                <td>Pranje + sušenje</td>
+                <td><span class="price-tag">0,35 €</span></td>
+              </tr>
+              <tr>
+                <td>Krpa za pod</td>
+                <td>Pranje + sušenje</td>
+                <td><span class="price-tag">0,60 €</span></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="grid-2">
-        <div>
-          © <span id="y"></span> Mon Ami. Sva prava pridržana.
-        </div>
-        <div style="text-align:right">
-          <a href="#">Politika privatnosti</a> · <a href="#">Uvjeti korištenja</a>
-        </div>
       </div>
-    </footer>
+
+      <!-- OSTALE CIJENE NA UPIT -->
+      <div style="background:linear-gradient(135deg, #f0f4ff, #fff1f2); border:1px solid var(--border); border-radius:var(--radius); padding:24px 28px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+        <div>
+          <p style="font-weight:700; color:var(--text); font-size:16px; margin:0 0 4px;">Imate posebne potrebe?</p>
+          <p style="margin:0; font-size:14px;">Ogrtači, uniforme, specijalni tekstil i veće količine — cijene na upit.</p>
+        </div>
+        <a class="btn btn-outline" href="#kontakt">Zatražite individualnu ponudu →</a>
+      </div>
+
+      <p style="text-align:center; font-size:13px; color:var(--muted); margin-top:16px;">* Informativne cijene po komadu. Dostava je uvijek uključena u cijenu.</p>
+
+    </section>
   </div>
 
-  <script>
-    document.getElementById('y').textContent=new Date().getFullYear();
-  </script>
+
+  <!-- CONTACT -->
+  <div class="contact-section">
+    <div class="container">
+      <section id="kontakt">
+        <div class="section-header" style="margin-bottom:56px;">
+          <span class="section-label" style="color:#f87171;">Kontakt</span>
+          <h2>Dogovorimo suradnju</h2>
+          <p>Pošaljite upit i javit ćemo vam se u roku od nekoliko sati.</p>
+        </div>
+        <div class="grid-2" style="align-items:start;">
+
+          <!-- FORM -->
+          <div class="contact-card">
+            <h3 style="color:#fff; font-size:20px; margin-bottom:22px;">📩 Pošaljite upit</h3>
+            <form name="kontakt" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="kontakt" />
+              <div class="form-group">
+                <input class="form-input" required name="objekt" placeholder="Naziv objekta (Hotel / Restoran / Apartman)" />
+                <input class="form-input" required type="email" name="email" placeholder="Email adresa" />
+                <input class="form-input" name="telefon" placeholder="Kontakt telefon" />
+                <textarea class="form-input" rows="4" name="poruka" placeholder="Opišite što vam treba (npr. 50 plahti tjedno, dostava 2× tjedno)..."></textarea>
+                <button class="btn btn-primary" type="submit" style="justify-content:center; width:100%; padding:15px;">Pošaljite upit →</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- INFO -->
+          <div>
+            <div class="contact-card" style="margin-bottom:20px;">
+              <h3 style="color:#fff; font-size:20px; margin-bottom:8px;">Direktan kontakt</h3>
+              <p style="margin-bottom:20px;">Trebate hitnu informaciju? Dostupni smo radnim danom.</p>
+              <div class="info-item">
+                <span class="info-icon">📞</span>
+                <div>
+                  <div class="info-label">Telefon</div>
+                  <div class="info-value"><a href="tel:+385918972364">+385 91 897 2364</a></div>
+                </div>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">📧</span>
+                <div>
+                  <div class="info-label">Email</div>
+                  <div class="info-value"><a href="mailto:info@mon-ami.hr">info@mon-ami.hr</a></div>
+                </div>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">📍</span>
+                <div>
+                  <div class="info-label">Područje usluge</div>
+                  <div class="info-value">Zagreb i okolica</div>
+                </div>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">🕐</span>
+                <div>
+                  <div class="info-label">Radno vrijeme</div>
+                  <div class="info-value">Pon–Pet: 08:00–18:00 &nbsp;|&nbsp; Sub: 09:00–13:00</div>
+                </div>
+              </div>
+            </div>
+            <div class="contact-card" style="background:rgba(225,29,72,0.1); border-color:rgba(225,29,72,0.25);">
+              <p style="font-weight:700; color:#fca5a5; margin-bottom:6px;">⚡ Brza dostava</p>
+              <p>Preuzimanje i povrat rublja u roku <strong style="color:#fff;">24–48 sati</strong>. Za hitne slučajeve, nazovite nas izravno.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© <span id="y"></span> Mon Ami Praonica Rublja d.o.o. &nbsp;|&nbsp; Zagreb, Hrvatska &nbsp;|&nbsp;
+      <a href="mailto:info@mon-ami.hr">info@mon-ami.hr</a> &nbsp;|&nbsp;
+      <a href="tel:+385918972364">+385 91 897 2364</a>
+    </p>
+  </footer>
+
+  <!-- MOBILE STICKY CTA -->
+  <a class="mobile-cta" href="tel:+385918972364">📞 Nazovite nas</a>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
