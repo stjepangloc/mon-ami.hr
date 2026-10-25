@@ -3,7 +3,7 @@ const menu=document.querySelector('.menu');
 menu.addEventListener('click',()=>{const isOpen=document.getElementById('nav-links').classList.toggle('open');menu.setAttribute('aria-expanded',String(isOpen));});
 document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links').classList.remove('open');menu.setAttribute('aria-expanded','false');}));
 const editor=document.getElementById('media-editor');
-document.getElementById('edit-media').addEventListener('click',()=>editor.showModal());
+document.getElementById('edit-media')?.addEventListener('click',()=>editor.showModal());
 document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',()=>b.closest('dialog').close()));
 document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}}));
 const selectedSlot=document.getElementById('slot-select'), fileInput=document.getElementById('media-file'),status=document.getElementById('media-status');
